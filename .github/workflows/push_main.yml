@@ -1,0 +1,39 @@
+name: Push Main Branch
+on:
+  push:
+    branches: main
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Create .env file
+        run: echo "${{ secrets.ENV_PROD }}" > .env
+      - name: Install package
+        run: |
+          npm install
+          cd functions
+          npm install
+          cd ..
+      - name: Build project
+        run: npm run build
+      - name: Deploy to firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - name: Slack Notification
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          author_name: mainブランチにマージされ、本番環境にデプロイ、Webサイトが更新されました。
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        if: always()
