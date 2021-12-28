@@ -6,13 +6,13 @@
     <WelcomeUser />
 
     <h2 class="heading--sub">
-      2021年2月15日にオープンラボを開催します。
+      2022年2月14日にオープンラボを開催します。
     </h2>
     <p class="heading--sub">
       オフラインでの訪問を希望される方は希望の時間を選択してください。
     </p>
     <p class="heading--accent">
-      2日前（2月13日）までこちらから予約できます。
+      2日前（2月12日）までこちらから予約できます。
     </p>
     <p
       v-show="error_message"
@@ -66,25 +66,21 @@ export default {
       uid: '',
       items: [
         {
-          time: '11:00',
-          state: 0
-        },
-        {
-          time: '11:30',
-          state: 0
-        },
-        {
           time: '14:15',
           state: 0
         },
         {
-          time: '16:00',
+          time: '15:00',
+          state: 0
+        },
+        {
+          time: '15:45',
           state: 0
         },
         {
           time: '16:30',
           state: 0
-        }
+        },
       ],
       error_message: ''
     }
@@ -130,14 +126,14 @@ export default {
       const month = today.getMonth() + 1
       const date = today.getDate()
 
-      if (year === 2021) {
+      if (year === 2022) {
         if (month === 2) {
-          return date < 14
+          return date < 13
         } else {
           return month < 2
         }
       } else {
-        return year < 2021
+        return year < 2022
       }
     }
   }
