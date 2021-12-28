@@ -2,7 +2,7 @@
   <article aria-label="トップページ">
     <section aria-label="オープンラボの概要">
       <h1 class="heading--main">
-        <time datetime="2021-02-15">2021年2月15日(月)</time> NISLAB オープンラボ 開催！
+        <time datetime="2022-02-14">2022年2月14日(月)</time> NISLAB オープンラボ 開催！
       </h1>
       <WelcomeUser />
 
@@ -21,7 +21,7 @@
           align-self="center"
         >
           <p>こんにちは！<br>ネットワーク情報システム研究室（<span class="text--bold">NISLAB</span>） 佐藤研究室です。</p>
-          <p>学部3年生を中心とした（1・2年生も大歓迎！）在学生の皆さんに向けた<span class="accent--text">オープンラボを<time datetime="2021-02-15">2021年2月15日(月)</time>に開催します</span>。</p>
+          <p>学部3年生を中心とした（1・2年生も大歓迎！）在学生の皆さんに向けた<span class="accent--text">オープンラボを<time datetime="2021-02-15">2022年2月14日(月)</time>に開催します</span>。</p>
           <p>当日は、zoomを用いたオンライン開催と現地でのオフライン開催のハイブリッド開催を予定しています。</p>
           <p>当日は十分な予防対策を行うことはもちろんのこと、事前の状況を見てプログラムの変更も想定しています。</p>
         </v-col>
@@ -35,7 +35,8 @@
             type="success"
             elevation="2"
           >
-            <a href="#home-zoom">オンライン開催 zoom の ID/Password を公開しました！</a>
+            <a href="#home-zoom">オープンラボ特設ページ開設しました！</a>
+            <!-- <a href="#home-zoom">オンライン開催 zoom の ID/Password を公開しました！</a> -->
           </v-alert>
         </v-col>
         <v-col cols="12">
@@ -153,19 +154,19 @@
                           colspan="2"
                           class="text-center"
                         >
-                          [ 13:00 - 14:00 ]
+                          [ 11:00 - 11:50 ]
                         </th>
                       </tr>
                       <tr>
                         <td>Zoom ID</td>
                         <td class="text--bold">
-                          850 4659 0994
+                          未定
                         </td>
                       </tr>
                       <tr>
                         <td>Password</td>
                         <td class="text--bold">
-                          852830
+                          未定
                         </td>
                       </tr>
                     </tbody>
@@ -183,19 +184,19 @@
                           colspan="2"
                           class="text-center"
                         >
-                          [ 15:00 - 16:00 ]
+                          [ 13:00 - 13:50 ]
                         </th>
                       </tr>
                       <tr>
                         <td>Zoom ID</td>
                         <td class="text--bold">
-                          826 2828 9180
+                          未定
                         </td>
                       </tr>
                       <tr>
                         <td>Password</td>
                         <td class="text--bold">
-                          437956
+                          未定
                         </td>
                       </tr>
                     </tbody>
@@ -230,7 +231,7 @@
               </ul>
             </v-card-text>
             <v-card-title>開催時間</v-card-title>
-            <v-card-subtitle><b>11:00</b>・<b>11:30</b>・<b>14:15</b>・<b>16:00</b>・<b>16:30</b>の5回に分けて開催します。<br>感染対策として、各回の定員を6名とさせていただき<u>完全予約制</u>にて実施させていただきます。<br>実際に研究室生活を送ることになる部屋の様子や雰囲気を知ってもらうだけでなく、様々なお話をしたいと思っています。<br>「ちょっと話を聞いてみたいだけなんだけど…」という方もぜひご予約ください！</v-card-subtitle>
+            <v-card-subtitle><b>14:15</b>・<b>15:00</b>・<b>15:45</b>・<b>16:30</b>の4回に分けて開催します。<br>感染対策として、各回の定員を6名とさせていただき<u>完全予約制</u>にて実施させていただきます。<br>実際に研究室生活を送ることになる部屋の様子や雰囲気を知ってもらうだけでなく、様々なお話をしたいと思っています。<br>「ちょっと話を聞いてみたいだけなんだけど…」という方もぜひご予約ください！</v-card-subtitle>
             <v-card-title>開催場所</v-card-title>
             <v-card-subtitle>
               同志社大学 京田辺キャンパス 恵喜館115号室 (KE-115)<br><a
@@ -266,27 +267,12 @@ export default {
       image: '/carousel/slider03.jpg',
       times: [
         {
-          time: '11:00 - (11:30) / 11:30 - (12:00)',
-          place: 'オフライン（現地）開催',
-          message: '完全予約制となりますのでご注意ください。'
-        },
-        {
-          time: '13:00 - (13:50)',
+          time: '11:00 - (11:50) / 13:00 - (13:50)',
           place: 'オンライン（zoom）開催',
           message: ''
         },
         {
-          time: '14:15 - (14:45)',
-          place: 'オフライン（現地）開催',
-          message: '完全予約制となりますのでご注意ください。'
-        },
-        {
-          time: '15:00 - (15:50)',
-          place: 'オンライン（zoom）開催',
-          message: ''
-        },
-        {
-          time: '16:00 - (16:30) / 16:30 - (17:00)',
+          time: '14:15 - (14:45) / 15:00 - (15:30) / 15:45 - (16:15) / 16:30 - (17:00)',
           place: 'オフライン（現地）開催',
           message: '完全予約制となりますのでご注意ください。'
         }
