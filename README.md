@@ -1,6 +1,4 @@
-<img src="https://user-images.githubusercontent.com/49851726/118398303-f497c680-b692-11eb-8d6a-cbe5ba9465e5.png" alt="nislab-openlab2021 cover">
-
-# <p align="center">NISLAB OpenLAB 2021 App</p>
+# <p align="center">NISLAB OpenLAB 2022 App</p>
 
 <div align="center">
 <a href="https://github.com/Kenny-NISLab/openlab-2021/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Kenny-NISLab/openlab-2021" alt="license"></a>
