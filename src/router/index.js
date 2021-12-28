@@ -21,11 +21,13 @@ const routes = [
     name: 'About',
     component: () => import('@/views/About.vue')
   },
-  {
-    path: '/extra',
-    name: 'ExtraContent',
-    component: () => import('@/views/ExtraContent.vue')
-  },
+
+  // {
+  //   path: '/extra',
+  //   name: 'ExtraContent',
+  //   component: () => import('@/views/ExtraContent.vue')
+  // },
+
   {
     path: '/contact',
     name: 'Contact',
