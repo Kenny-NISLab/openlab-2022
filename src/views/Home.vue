@@ -21,11 +21,7 @@
           align-self="center"
         >
           <p>こんにちは！<br>ネットワーク情報システム研究室（<span class="text--bold">NISLAB</span>） 佐藤研究室です。</p>
-<<<<<<< Updated upstream
-          <p>学部3年生を中心とした（1・2年生も大歓迎！）在学生の皆さんに向けた<span class="accent--text">オープンラボを<time datetime="2021-02-15">2022年2月14日(月)</time>に開催します</span>。</p>
-=======
           <p>学部3年生を中心とした（1・2年生も大歓迎！）在学生の皆さんに向けた<span class="accent--text">オープンラボを<time datetime="2022-02-14">2022年2月14日(月)</time>に開催します</span>。</p>
->>>>>>> Stashed changes
           <p>当日は、zoomを用いたオンライン開催と現地でのオフライン開催のハイブリッド開催を予定しています。</p>
           <p>当日は十分な予防対策を行うことはもちろんのこと、事前の状況を見てプログラムの変更も想定しています。</p>
         </v-col>
