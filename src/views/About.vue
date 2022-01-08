@@ -26,7 +26,7 @@
               href="https://twitter.com/nislab_sato"
               target="_blank"
             >
-              <v-img src="/sns/twitter01.png" />
+              <v-img src="/sns/twitter01.jpg" />
             </a>
             <v-card-title>
               Twitter (<a
@@ -46,7 +46,7 @@
               href="https://nislab.doshisha.ac.jp"
               target="_blank"
             >
-              <v-img src="/sns/website01.png" />
+              <v-img src="/sns/website01.jpg" />
             </a>
             <v-card-title>研究室サイト運営してます！</v-card-title>
             <v-card-subtitle>研究発表についての報告などもしています。<br>近日、リニューアル予定！</v-card-subtitle>
