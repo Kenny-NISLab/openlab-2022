@@ -39,6 +39,7 @@
             <!-- <a href="#home-teams">オンライン開催 teams の ID/Password を公開しました！</a> -->
           <!-- </v-alert>
         </v-col> -->
+        
         <v-col cols="12">
           <v-alert
             border="right"
