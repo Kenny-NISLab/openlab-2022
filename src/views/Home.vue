@@ -22,23 +22,24 @@
         >
           <p>こんにちは！<br>ネットワーク情報システム研究室（<span class="text--bold">NISLAB</span>） 佐藤研究室です。</p>
           <p>学部3年生を中心とした（1・2年生も大歓迎！）在学生の皆さんに向けた<span class="accent--text">オープンラボを<time datetime="2022-02-14">2022年2月14日(月)</time>に開催します</span>。</p>
-          <p>当日は、zoomを用いたオンライン開催と現地でのオフライン開催のハイブリッド開催を予定しています。</p>
+          <p>当日は、teamsを用いたオンライン開催と現地でのオフライン開催のハイブリッド開催を予定しています。</p>
           <p>当日は十分な予防対策を行うことはもちろんのこと、事前の状況を見てプログラムの変更も想定しています。</p>
         </v-col>
       </v-row>
 
       <v-row>
-        <v-col cols="12">
+        <!-- <v-col cols="12">
           <v-alert
             border="right"
             colored-border
             type="success"
             elevation="2"
           >
-            <a href="#home-zoom">オープンラボ特設ページ開設しました！</a>
-            <!-- <a href="#home-zoom">オンライン開催 zoom の ID/Password を公開しました！</a> -->
-          </v-alert>
-        </v-col>
+            <a href="#home-teams">オープンラボ特設ページ開設しました！</a> -->
+            <!-- <a href="#home-teams">オンライン開催 teams の ID/Password を公開しました！</a> -->
+          <!-- </v-alert>
+        </v-col> -->
+        
         <v-col cols="12">
           <v-alert
             border="right"
@@ -118,7 +119,7 @@
         >
           <v-card>
             <v-card-title><b>オンライン開催</b></v-card-title>
-            <v-card-subtitle>zoomを利用して開催します。<br>どなたでも気軽に参加いただけます。</v-card-subtitle>
+            <v-card-subtitle>teamsを利用して開催します。<br>どなたでも気軽に参加いただけます。</v-card-subtitle>
             <v-divider class="mx-3" />
             <v-card-title>プログラム</v-card-title>
             <v-card-subtitle>研究室紹介や例年よく出る質問などを紹介し、参加してくださるみなさんの質問等にもお答えします。<br>希望者には、ブレイクアウトルームを用いた相談会なども開催予定です。</v-card-subtitle>
@@ -139,11 +140,11 @@
               </ul>
             </v-card-text>
             <v-card-title>開催時間</v-card-title>
-            <v-card-subtitle><b>11:00</b>と<b>13:00</b>の2回開催します。<br>50分程度を予定していますが、途中参加/退出も大歓迎です！<br>zoomはビデオをオンにする必要はありません。<br>聞くだけでも大歓迎ですのでぜひご参加ください。</v-card-subtitle>
-            <v-card-title id="home-zoom">
+            <v-card-subtitle><b>11:00</b>と<b>13:00</b>の2回開催します。<br>50分程度を予定していますが、途中参加/退出も大歓迎です！<br>teamsはビデオをオンにする必要はありません。<br>聞くだけでも大歓迎ですのでぜひご参加ください。</v-card-subtitle>
+            <v-card-title id="home-teams">
               参加方法
             </v-card-title>
-            <v-card-subtitle>前日までにzoomの参加URLを下記に記載しますのでそちらから参加ください。</v-card-subtitle>
+            <v-card-subtitle>前日までにteamsの参加URLを下記に記載しますのでそちらから参加ください。</v-card-subtitle>
             <v-card-text>
               <v-card class="pa-2 text-center">
                 <v-simple-table dense>
@@ -158,17 +159,17 @@
                         </th>
                       </tr>
                       <tr>
-                        <td>Zoom ID</td>
+                        <td>teams URL</td>
                         <td class="text--bold">
                           未定
                         </td>
                       </tr>
-                      <tr>
+                      <!-- <tr>
                         <td>Password</td>
                         <td class="text--bold">
                           未定
                         </td>
-                      </tr>
+                      </tr> -->
                     </tbody>
                   </template>
                 </v-simple-table>
@@ -188,17 +189,17 @@
                         </th>
                       </tr>
                       <tr>
-                        <td>Zoom ID</td>
+                        <td>teams URL</td>
                         <td class="text--bold">
                           未定
                         </td>
                       </tr>
-                      <tr>
+                      <!-- <tr>
                         <td>Password</td>
                         <td class="text--bold">
                           未定
                         </td>
-                      </tr>
+                      </tr> -->
                     </tbody>
                   </template>
                 </v-simple-table>
@@ -268,12 +269,12 @@ export default {
       times: [
         {
           time: '11:00 - (11:50)',
-          place: 'オンライン（zoom）開催',
+          place: 'オンライン（teams）開催',
           message: ''
         },
         {
           time: '13:00 - (13:50)',
-          place: 'オンライン（zoom）開催',
+          place: 'オンライン（teams）開催',
           message: ''
         },
         {
