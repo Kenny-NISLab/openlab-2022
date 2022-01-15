@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "open-nislab"
-  }
+    "prod": "openlab-2022-prod",
+    "defoult": "openlab-2022-prod"
+  },
+  "targets": {}
 }
