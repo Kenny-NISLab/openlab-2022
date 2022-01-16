@@ -12,10 +12,12 @@ const menuLogined = [
     name: 'コンテンツ',
     path: '/about'
   },
-  {
-    name: '追加コンテンツ',
-    path: '/extra'
-  },
+
+  // {
+  //   name: '追加コンテンツ',
+  //   path: '/extra'
+  // },
+
   {
     name: 'オープンラボ訪問予約',
     path: '/openlab/reserve'
@@ -43,10 +45,10 @@ const menuLogouted = [
     name: 'コンテンツ',
     path: '/about'
   },
-  {
-    name: '追加コンテンツ',
-    path: '/extra'
-  },
+  // {
+  //   name: '追加コンテンツ',
+  //   path: '/extra'
+  // },
   {
     name: 'ログイン・新規登録',
     path: '/signin'

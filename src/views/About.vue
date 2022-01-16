@@ -26,7 +26,7 @@
               href="https://twitter.com/nislab_sato"
               target="_blank"
             >
-              <v-img src="/sns/twitter01.png" />
+              <v-img src="/sns/twitter01.jpg" />
             </a>
             <v-card-title>
               Twitter (<a
@@ -46,7 +46,7 @@
               href="https://nislab.doshisha.ac.jp"
               target="_blank"
             >
-              <v-img src="/sns/website01.png" />
+              <v-img src="/sns/website01.jpg" />
             </a>
             <v-card-title>研究室サイト運営してます！</v-card-title>
             <v-card-subtitle>研究発表についての報告などもしています。<br>近日、リニューアル予定！</v-card-subtitle>
@@ -138,7 +138,7 @@ export default {
         },
         {
           q: 'コロナになってからはオンラインですか？',
-          ans: '今年度（2020年度）のミーティング等は全てオンラインで行っています。研究やおしゃべりしに研究室に来る人もいるので、最近はハイブリッドミーティングをしています。来年度以降もみんなで相談して方針を決めようと思っています。'
+          ans: '昨年度（2020年度）のミーティング等は全てオンラインで行っていました。今年度は（2021年度）は基本的にオフラインで行なっていますが、感染状況に応じてオンラインで行なっています。来年度以降もみんなで相談して方針を決めようと思っています。'
         },
         {
           q: 'どうやって研究室を選んだらいいですか？',
