@@ -94,7 +94,7 @@ export default {
       const day2 = new Date()
       const year2 = day2.getFullYear()
       const month2 = day2.getMonth() + 1
-      const date2 = day2.getDate() + 2
+      const date2 = day2.getDate() + 1
 
       if (year1 === year2) {
         if (month1 === month2) {
