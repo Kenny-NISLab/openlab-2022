@@ -36,10 +36,10 @@
             :key="item.time"
           >
             <td>{{ item.time }}</td>
-            <td>{{ item.state }} / 6</td>
+            <td>{{ item.state }} / 8</td>
             <td>
               <v-btn
-                v-show="item.state < 6 && isDayBefore()"
+                v-show="item.state < 8 && isDayBefore()"
                 @click="submitReservation(item.time)"
               >
                 予約する
