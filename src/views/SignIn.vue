@@ -11,7 +11,7 @@
       type="error"
       elevation="2"
     >
-      メール認証がされていません。
+      メール認証がされていません。認証メールが再送されない場合は時間を置いてお試しください。
     </v-alert>
 
     <v-form>
@@ -68,24 +68,27 @@ export default {
   methods: {
     userSingIn () {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-        .then((res) => {
-          if(res.user.emailVerified){
+        .then(() => {
+          const currentUser = firebase.auth().currentUser;
+          if(currentUser.emailVerified){
             alert('ログインしました。')
             this.$router.push('/')
           }else{
             this.isEmail=false;
-            firebase.auth().currentUser.sendEmailVerification().then(() => {
-              alert('メールアドレスが確認されていません。 ' + this.email + ' に確認メールを送信しましたので、リンクをクリックして認証してください。')
-              firebase.auth().signOut()
-            })
-            // .catch((error) => {
-            //   alert(error)
-            // })
+            this.sendEmailVerification()
           }
         })
         .catch(() => {
           alert('メールアドレスかパスワードが間違っています。')
         })
+    },
+    async sendEmailVerification(){
+      try {
+        await firebase.auth().currentUser.sendEmailVerification();
+        alert('メールアドレスが確認されていません。 ' + this.email + ' に確認メールを送信しましたので、リンクをクリックして認証してください。')
+      } catch (e) {
+        console.log(e);
+      }
     }
   }
 }
