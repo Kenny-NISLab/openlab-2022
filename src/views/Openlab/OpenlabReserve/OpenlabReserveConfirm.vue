@@ -54,7 +54,7 @@ export default {
   },
   created () {
     firebase.auth().onAuthStateChanged((user) => {
-      if (user && user.emailVerified) {
+      if (user) {
         this.reserveForm.uid = user.uid
         this.reserveForm.email = user.email
       } else {

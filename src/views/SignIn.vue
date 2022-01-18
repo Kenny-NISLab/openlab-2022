@@ -6,13 +6,12 @@
 
     <v-alert
       v-show="!isEmail"
-      prominent
       border="right"
       colored-border
       type="error"
       elevation="2"
     >
-      <span class="red--text">メール認証がされてないため、認証メールを再送信しました。</span><br>認証メールが再送信されない場合は時間を置いてお試しください。
+      メール認証がされていません。
     </v-alert>
 
     <v-form>
@@ -69,27 +68,24 @@ export default {
   methods: {
     userSingIn () {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-        .then(() => {
-          const currentUser = firebase.auth().currentUser;
-          if(currentUser.emailVerified){
+        .then((res) => {
+          if(res.user.emailVerified){
             alert('ログインしました。')
             this.$router.push('/')
           }else{
             this.isEmail=false;
-            this.sendEmailVerification()
+            firebase.auth().currentUser.sendEmailVerification().then(() => {
+              alert('メールアドレスが確認されていません。 ' + this.email + ' に確認メールを送信しましたので、リンクをクリックして認証してください。')
+              firebase.auth().signOut()
+            })
+            // .catch((error) => {
+            //   alert(error)
+            // })
           }
         })
         .catch(() => {
           alert('メールアドレスかパスワードが間違っています。')
         })
-    },
-    async sendEmailVerification(){
-      try {
-        await firebase.auth().currentUser.sendEmailVerification();
-        alert('メールアドレスが確認されていません。 ' + this.email + ' に確認メールを送信しましたので、リンクをクリックして認証してください。')
-      } catch (e) {
-        console.log(e);
-      }
     }
   }
 }

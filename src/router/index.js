@@ -115,7 +115,7 @@ router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
   if (requiresAuth) {
     firebase.auth().onAuthStateChanged(function (user) {
-      if (user && user.emailVerified) {
+      if (user) {
         next()
       } else {
         next({

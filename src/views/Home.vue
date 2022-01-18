@@ -343,7 +343,7 @@ export default {
   },
   created() {
     firebase.auth().onAuthStateChanged((user) => {
-      if (user && user.emailVerified) {
+      if (user) {
         this.uid = user.uid;
       } else {
         this.uid = null;
