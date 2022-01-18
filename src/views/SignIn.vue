@@ -6,12 +6,13 @@
 
     <v-alert
       v-show="!isEmail"
+      prominent
       border="right"
       colored-border
       type="error"
       elevation="2"
     >
-      メール認証がされていません。認証メールが再送されない場合は時間を置いてお試しください。
+      <span class="red--text">メール認証がされてないため、認証メールを再送信しました。</span><br>認証メールが再送信されない場合は時間を置いてお試しください。
     </v-alert>
 
     <v-form>
