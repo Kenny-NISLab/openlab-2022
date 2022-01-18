@@ -73,6 +73,7 @@ export default {
             alert('アカウントを作成しました。 ' + this.email + ' に確認メールを送信しましたので、リンクをクリックして認証してください。')
             firebase.auth().languageCode = 'ja'
             firebase.auth().currentUser.sendEmailVerification().then(() => {
+              firebase.auth().signOut()
               this.$router.push('/signin')
             })
           })
