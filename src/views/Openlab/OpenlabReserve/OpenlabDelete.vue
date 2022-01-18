@@ -39,7 +39,7 @@ export default {
   created () {
     this.reservation = this.$route.query.reservation
     firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
+      if (user && user.emailVerified) {
         this.uid = user.uid
       } else {
         this.uid = null

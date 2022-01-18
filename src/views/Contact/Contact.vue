@@ -71,7 +71,7 @@ export default {
   },
   created () {
     firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
+      if (user && user.emailVerified) {
         this.contactForm.email = user.email
       } else {
         this.contactForm.email = null
