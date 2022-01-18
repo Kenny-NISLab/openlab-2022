@@ -56,7 +56,7 @@ export default {
   },
   async created () {
     await firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
+      if (user && user.emailVerified) {
         this.uid = user.uid
       } else {
         this.uid = null
