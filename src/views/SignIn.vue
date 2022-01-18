@@ -4,6 +4,16 @@
       ログイン
     </h1>
 
+    <v-alert
+      v-show="!isEmail"
+      border="right"
+      colored-border
+      type="error"
+      elevation="2"
+    >
+      メール認証がされていません。
+    </v-alert>
+
     <v-form>
       <v-text-field
         v-model="email"
@@ -50,6 +60,7 @@ export default {
   },
   data () {
     return {
+      isEmail: true,
       email: '',
       password: ''
     }
@@ -57,9 +68,20 @@ export default {
   methods: {
     userSingIn () {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-        .then(() => {
-          alert('ログインしました。')
-          this.$router.push('/')
+        .then((res) => {
+          if(res.user.emailVerified){
+            alert('ログインしました。')
+            this.$router.push('/')
+          }else{
+            this.isEmail=false;
+            firebase.auth().currentUser.sendEmailVerification().then(() => {
+              alert('メールアドレスが確認されていません。 ' + this.email + ' に確認メールを送信しましたので、リンクをクリックして認証してください。')
+              firebase.auth().signOut()
+            })
+            // .catch((error) => {
+            //   alert(error)
+            // })
+          }
         })
         .catch(() => {
           alert('メールアドレスかパスワードが間違っています。')
