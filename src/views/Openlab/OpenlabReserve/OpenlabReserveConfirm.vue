@@ -74,7 +74,7 @@ export default {
       firebase.database().ref('openlab/' + this.reserveForm.time).on('value', (parent) => {
         this.sumReserve = parent.numChildren()
       })
-      if (this.sumReserve < 6) {
+      if (this.sumReserve < 8) {
         const sendMail = firebase.functions().httpsCallable('sendReservation')
         sendMail(this.reserveForm)
 
