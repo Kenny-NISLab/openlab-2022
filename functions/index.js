@@ -129,7 +129,7 @@ exports.sendReservation = functions.https.onCall(async (data) => {
 
 // 予約完了のメールテンプレート
 const adminCancel = data => {
-    return `${data.name}さん
+return `${data.name}さん
 
 NISLAB 佐藤研究室です。
 
