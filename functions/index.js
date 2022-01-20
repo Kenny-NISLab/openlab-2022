@@ -125,3 +125,58 @@ exports.sendReservation = functions.https.onCall(async (data) => {
         return console.log('success')
     })
 })
+
+
+// 予約完了のメールテンプレート
+const adminCancel = data => {
+return `${data.name}さん
+
+NISLAB 佐藤研究室です。
+
+以下の研究室訪問の予約をキャンセルしました。
+
+お名前：
+${data.name}
+
+学籍番号：
+${data.studentId}
+
+メールアドレス：
+${data.email}
+
+日時：
+${data.date} ${data.time}
+
+補足事項：
+${data.message}
+
+不明点等ありましたら、下記のメールアドレスまでご連絡ください。
+以上、今後ともよろしくお願いいたします。
+
+*** このメールは学生が管理しています ***
+------------------------------------------------------
+同志社大学大学院 理工学研究科 情報工学専攻
+同志社大学 理工学部 情報システムデザイン学科
+ネットワーク情報システム研究室(NISLAB) 佐藤研究室
+Email: nislab.sato@gmail.com
+Address: 恵喜館101号室 (KE-101)
+------------------------------------------------------
+`;
+};
+
+exports.sendCancel = functions.https.onCall(async (data) => {
+    let email = {
+        from: gmailEmail,
+        to: data.email,
+        cc: gmailEmail,
+        bcc: adminEmail,
+        subject: '【NISLAB】研究室訪問をキャンセルしました',
+        text: adminCancel(data),
+    }
+    await mailTransport.sendMail(email, (err) => {
+        if (err) {
+            return console.log(err)
+        }
+        return console.log('success')
+    })
+})
