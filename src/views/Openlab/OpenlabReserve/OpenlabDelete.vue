@@ -50,10 +50,13 @@ export default {
     confirmDeleteOpenlabReservation () {
       firebase.database().ref('reservation/' + this.uid).remove()
       firebase.database().ref('openlab/' + this.reservation.time + '/' + this.reservation.id).remove().then(() => {
+        const sendMail = firebase.functions().httpsCallable('sendCancel')
+        sendMail(this.reservation)
         alert('予約をキャンセルしました。')
         this.$router.push('/mypage')
       })
     },
+
 
     backToReservation () {
       this.$router.push('/mypage')
