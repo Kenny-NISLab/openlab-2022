@@ -2,34 +2,30 @@
   <article aria-label="トップページ">
     <section aria-label="オープンラボの概要">
       <h1 class="heading--main">
-        <time datetime="2022-02-14">2022年2月14日(月)</time> NISLAB オープンラボ
+        <time datetime="2023-02-20">2023年2月20日(月)</time> NISLAB オープンラボ
         開催！
       </h1>
       <WelcomeUser />
 
       <v-row class="my-6">
-        <v-col
-          cols="12"
-          md="6"
-        >
+        <v-col cols="12" md="6">
           <v-card>
             <v-img :src="image" />
           </v-card>
         </v-col>
-        <v-col
-          cols="12"
-          md="6"
-          align-self="center"
-        >
+        <v-col cols="12" md="6" align-self="center">
           <p>
-            こんにちは！<br>ネットワーク情報システム研究室（<span
+            こんにちは！<br />ネットワーク情報システム研究室（<span
               class="text--bold"
-            >NISLAB</span>） 佐藤研究室です。
+              >NISLAB</span
+            >） 佐藤研究室です。
           </p>
           <p>
             学部3年生を中心とした（1・2年生も大歓迎！）在学生の皆さんに向けた<span
               class="accent--text"
-            >オープンラボを<time datetime="2022-02-14">2022年2月14日(月)</time>に開催します</span>。
+              >オープンラボを<time datetime="2023-02-20">2023年2月20日(月)</time
+              >に開催します</span
+            >。
           </p>
           <p>
             当日は、teamsを用いたオンライン開催と現地でのオフライン開催のハイブリッド開催を予定しています。
@@ -54,47 +50,30 @@
         </v-col> -->
 
         <v-col cols="12">
-          <v-alert
-            border="right"
-            colored-border
-            type="error"
-            elevation="2"
-          >
+          <v-alert border="right" colored-border type="error" elevation="2">
             オフラインでの研究室訪問を希望される方は<router-link
               to="/openlab/reserve"
             >
-              予約が必要
-            </router-link>です。必ずご確認ください。
+              予約が必要 </router-link
+            >です。必ずご確認ください。
           </v-alert>
         </v-col>
       </v-row>
 
       <v-row v-show="!uid">
         <v-col cols="12">
-          <v-alert
-            border="right"
-            colored-border
-            type="warning"
-            elevation="2"
-          >
-            質問や相談等の<router-link to="/contact">
-              お問い合わせ
-            </router-link>は、ログインしていただくことでご利用いただけます。
+          <v-alert border="right" colored-border type="warning" elevation="2">
+            質問や相談等の<router-link to="/contact"> お問い合わせ </router-link
+            >は、ログインしていただくことでご利用いただけます。
           </v-alert>
         </v-col>
       </v-row>
     </section>
 
     <section aria-label="当日のタイムスケジュールについて">
-      <h1 class="heading--main">
-        タイムスケジュール
-      </h1>
+      <h1 class="heading--main">タイムスケジュール</h1>
       <v-row justify="center">
-        <v-col
-          cols="12"
-          sm="10"
-          md="8"
-        >
+        <v-col cols="12" sm="10" md="8">
           <v-timeline dense>
             <v-timeline-item
               v-for="(time, i) in times"
@@ -118,31 +97,26 @@
     <section
       aria-label="オープンラボの開催にあたってオンライン/オフラインの要領"
     >
-      <h1 class="heading--main">
-        オープンラボ要領
-      </h1>
+      <h1 class="heading--main">オープンラボ要領</h1>
       <h2 class="heading--accent">
         今年度のオープンラボはオンライン/オフラインのハイブリッド開催をします
       </h2>
       <p class="heading--min mx-2 my-2">
-        それぞれ時間が異なりますので、両方参加していただくことも可能です。<br>3年生だけでなく、1・2年生も大歓迎ですので是非ご参加ください！
+        それぞれ時間が異なりますので、両方参加していただくことも可能です。<br />3年生だけでなく、1・2年生も大歓迎ですので是非ご参加ください！
       </p>
 
       <v-row class="my-6">
         <!-- オンライン開催 -->
-        <v-col
-          cols="12"
-          md="6"
-        >
+        <v-col cols="12" md="6">
           <v-card>
             <v-card-title><b>オンライン開催</b></v-card-title>
             <v-card-subtitle>
-              teamsを利用して開催します。<br>どなたでも気軽に参加いただけます。
+              teamsを利用して開催します。<br />どなたでも気軽に参加いただけます。
             </v-card-subtitle>
             <v-divider class="mx-3" />
             <v-card-title>プログラム</v-card-title>
             <v-card-subtitle>
-              研究室紹介や例年よく出る質問などを紹介し、参加してくださるみなさんの質問等にもお答えします。<br>希望者には、ブレイクアウトルームを用いた相談会なども開催予定です。
+              研究室紹介や例年よく出る質問などを紹介し、参加してくださるみなさんの質問等にもお答えします。<br />希望者には、ブレイクアウトルームを用いた相談会なども開催予定です。
             </v-card-subtitle>
             <v-card-text>
               <ul>
@@ -162,11 +136,10 @@
             </v-card-text>
             <v-card-title>開催時間</v-card-title>
             <v-card-subtitle>
-              <b>11:00</b>と<b>13:00</b>の2回開催します。<br>50分程度を予定していますが、途中参加/退出も大歓迎です！<br>teamsはビデオをオンにする必要はありません。<br>聞くだけでも大歓迎ですのでぜひご参加ください。
+              <b>11:00</b
+              >と<b>13:00</b>の2回開催します。<br />50分程度を予定していますが、途中参加/退出も大歓迎です！<br />teamsはビデオをオンにする必要はありません。<br />聞くだけでも大歓迎ですのでぜひご参加ください。
             </v-card-subtitle>
-            <v-card-title id="home-teams">
-              参加方法
-            </v-card-title>
+            <v-card-title id="home-teams"> 参加方法 </v-card-title>
             <v-card-subtitle>
               前日までにteamsの参加URLを下記に記載しますのでそちらから参加ください。
             </v-card-subtitle>
@@ -176,23 +149,21 @@
                   <template #default>
                     <tbody>
                       <tr>
-                        <th
-                          colspan="2"
-                          class="text-center"
-                        >
+                        <th colspan="2" class="text-center">
                           [ 11:00 - 11:50 ]
                         </th>
                       </tr>
                       <tr>
                         <td>teams URL</td>
-                        <td class="text--bold">
+                        <td>未定</td>
+                        <!-- <td class="text--bold">
                           <a
                             href="https://teams.live.com/meet/95792630617693"
                             target="_blank"
                           >
                             https://teams.live.com/meet/95792630617693
                           </a>
-                        </td>
+                        </td> -->
                       </tr>
                       <!-- <tr>
                         <td>Password</td>
@@ -211,23 +182,21 @@
                   <template #default>
                     <tbody>
                       <tr>
-                        <th
-                          colspan="2"
-                          class="text-center"
-                        >
+                        <th colspan="2" class="text-center">
                           [ 13:00 - 13:50 ]
                         </th>
                       </tr>
                       <tr>
                         <td>teams URL</td>
-                        <td class="text--bold">
+                        <td>未定</td>
+                        <!-- <td class="text--bold">
                           <a
                             href="https://teams.live.com/meet/95986361310841"
                             target="_blank"
                           >
                             https://teams.live.com/meet/95986361310841
                           </a>
-                        </td>
+                        </td> -->
                       </tr>
                       <!-- <tr>
                         <td>Password</td>
@@ -244,19 +213,16 @@
         </v-col>
 
         <!-- オフライン開催 -->
-        <v-col
-          cols="12"
-          md="6"
-        >
+        <v-col cols="12" md="6">
           <v-card height="100%">
             <v-card-title><b>オフライン開催</b></v-card-title>
             <v-card-subtitle>
-              研究室に直接訪問し、雰囲気等を味わっていただけます。<br>感染対策を十分に行った上で実施します。
+              研究室に直接訪問し、雰囲気等を味わっていただけます。<br />感染対策を十分に行った上で実施します。
             </v-card-subtitle>
             <v-divider class="mx-3" />
             <v-card-title>プログラム</v-card-title>
             <v-card-subtitle>
-              訪問してくださる皆さんとの会話を大切にし、皆さんの研究室配属（それ以外の内容も大歓迎！）に関する相談などを受け付けます。<br>簡単な研究室紹介や例年よく出る質問などを紹介し、参加してくださるみなさんの質問等にもお答えします。
+              訪問してくださる皆さんとの会話を大切にし、皆さんの研究室配属（それ以外の内容も大歓迎！）に関する相談などを受け付けます。<br />簡単な研究室紹介や例年よく出る質問などを紹介し、参加してくださるみなさんの質問等にもお答えします。
             </v-card-subtitle>
             <v-card-text>
               <ul>
@@ -272,20 +238,22 @@
             </v-card-text>
             <v-card-title>開催時間</v-card-title>
             <v-card-subtitle>
-              <b>14:15</b>・<b>15:00</b>・<b>15:45</b>・<b>16:30</b>の4回に分けて開催します。<br>感染対策として、各回の定員を8名とさせていただき<u>完全予約制</u>にて実施させていただきます。<br>実際に研究室生活を送ることになる部屋の様子や雰囲気を知ってもらうだけでなく、様々なお話をしたいと思っています。<br>「ちょっと話を聞いてみたいだけなんだけど…」という方もぜひご予約ください！
+              <b>14:15</b
+              >・<b>15:00</b>・<b>15:45</b>・<b>16:30</b>の4回に分けて開催します。<br />感染対策として、各回の定員を8名とさせていただき<u>完全予約制</u>にて実施させていただきます。<br />実際に研究室生活を送ることになる部屋の様子や雰囲気を知ってもらうだけでなく、様々なお話をしたいと思っています。<br />「ちょっと話を聞いてみたいだけなんだけど…」という方もぜひご予約ください！
             </v-card-subtitle>
             <v-card-title>開催場所</v-card-title>
             <v-card-subtitle>
-              同志社大学 京田辺キャンパス 恵喜館115号室 (KE-115)<br><a
+              同志社大学 京田辺キャンパス 恵喜館115号室 (KE-115)<br /><a
                 href="https://www.doshisha.ac.jp/information/campus/kyotanabe/kyotanabe.html"
                 target="_blank"
-              >キャンパスマップ</a>：紫苑館食堂の奥の建物です。
+                >キャンパスマップ</a
+              >：紫苑館食堂の奥の建物です。
             </v-card-subtitle>
             <v-card-title>参加方法</v-card-title>
             <v-card-subtitle>
               2日前までに<router-link to="/openlab/reserve">
-                こちら(ログインが必要です)
-              </router-link>から参加を希望する時間の予約を行ってください。<br>各回の定員を8名とさせていただいておりますので、ご希望の方はお早めにご予約ください。
+                こちら(ログインが必要です) </router-link
+              >から参加を希望する時間の予約を行ってください。<br />各回の定員を8名とさせていただいておりますので、ご希望の方はお早めにご予約ください。
             </v-card-subtitle>
           </v-card>
         </v-col>
