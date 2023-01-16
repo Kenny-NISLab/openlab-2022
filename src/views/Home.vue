@@ -2,7 +2,7 @@
   <article aria-label="トップページ">
     <section aria-label="オープンラボの概要">
       <h1 class="heading--main">
-        <time datetime="2022-02-14">2022年2月14日(月)</time> NISLAB オープンラボ
+        <time datetime="2023-02-20">2023年2月20日(月)</time> NISLAB オープンラボ
         開催！
       </h1>
       <WelcomeUser />
@@ -23,7 +23,7 @@
           <p>
             学部3年生を中心とした（1・2年生も大歓迎！）在学生の皆さんに向けた<span
               class="accent--text"
-              >オープンラボを<time datetime="2022-02-14">2023年2月14日(月)</time
+              >オープンラボを<time datetime="2023-02-20">2023年2月20日(月)</time
               >に開催します</span
             >。
           </p>
