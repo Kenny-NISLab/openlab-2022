@@ -85,7 +85,7 @@ export default {
           uid: this.reserveForm.uid,
           email: this.reserveForm.email,
           today: this.getToday(),
-          date: '2022-02-14',
+          date: '2023-02-20',
           time: this.reserveForm.time,
           name: this.reserveForm.name,
           studentId: this.reserveForm.studentId,
@@ -93,14 +93,14 @@ export default {
         })
 
         firebase.database().ref('reservation/' + this.reserveForm.uid).set({
-          id: postListKey,
-          uid: this.reserveForm.uid,
-          email: this.reserveForm.email,
-          today: this.getToday(),
-          date: '2022-02-14',
-          time: this.reserveForm.time,
-          name: this.reserveForm.name,
-          studentId: this.reserveForm.studentId,
+            id: postListKey,
+            uid: this.reserveForm.uid,
+            email: this.reserveForm.email,
+            today: this.getToday(),
+          date: '2023-02-20',
+            time: this.reserveForm.time,
+            name: this.reserveForm.name,
+            studentId: this.reserveForm.studentId,
           message: this.reserveForm.message
         })
 
