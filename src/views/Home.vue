@@ -155,14 +155,15 @@
                       </tr>
                       <tr>
                         <td>teams URL</td>
-                        <td class="text--bold">
+                        <td>未定</td>
+                        <!-- <td class="text--bold">
                           <a
                             href="https://teams.live.com/meet/95792630617693"
                             target="_blank"
                           >
                             https://teams.live.com/meet/95792630617693
                           </a>
-                        </td>
+                        </td> -->
                       </tr>
                       <!-- <tr>
                         <td>Password</td>
@@ -187,14 +188,15 @@
                       </tr>
                       <tr>
                         <td>teams URL</td>
-                        <td class="text--bold">
+                        <td>未定</td>
+                        <!-- <td class="text--bold">
                           <a
                             href="https://teams.live.com/meet/95986361310841"
                             target="_blank"
                           >
                             https://teams.live.com/meet/95986361310841
                           </a>
-                        </td>
+                        </td> -->
                       </tr>
                       <!-- <tr>
                         <td>Password</td>
