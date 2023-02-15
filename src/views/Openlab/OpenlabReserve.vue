@@ -6,18 +6,18 @@
     <WelcomeUser />
 
     <h2 class="heading--sub">
-      2022年2月14日にオープンラボを開催します。
-    </h2>
+      2023年2月20日にオープンラボを開催します。
+      </h2>
     <p class="heading--sub">
       オフラインでの訪問を希望される方は希望の時間を選択してください。
     </p>
     <p class="heading--accent">
-      2日前（2月12日）までこちらから予約できます。
+      2日前（2月18日）までこちらから予約できます。
     </p>
-    <p
+    <p 
       v-show="error_message"
       class="heading--sub accent--text"
-    >
+      >
       {{ error_message }}
     </p>
 
@@ -31,10 +31,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr
-            v-for="item in items"
+          <tr 
+            v-for="item in items" 
             :key="item.time"
-          >
+            >
             <td>{{ item.time }}</td>
             <td>{{ item.state }} / 8</td>
             <td>
@@ -103,39 +103,39 @@ export default {
   methods: {
     submitReservation: function (reserveTime) {
       firebase.database().ref('reservation').once('value', (snapshot) => {
-        snapshot.forEach((childSnapshot) => {
-          if (childSnapshot.key === this.uid) {
+          snapshot.forEach((childSnapshot) => {
+            if (childSnapshot.key === this.uid) {
             this.error_message = '既に予約があります。時間を変更したい方は先に予約をキャンセルしてください。'
-          }
+            }
         })
       }).then(() => {
-        if (!this.error_message) {
-          this.$router.push({
+          if (!this.error_message) {
+            this.$router.push({
             path: '/openlab/reserve/form',
-            query: {
+              query: {
               time: reserveTime
-            }
+          }
           })
         }
       })
     },
 
-    isDayBefore () {
-      const today = new Date()
-      const year = today.getFullYear()
-      const month = today.getMonth() + 1
-      const date = today.getDate()
+    isDayBefore() {
+      const today = new Date();
+      const year = today.getFullYear();
+      const month = today.getMonth() + 1;
+      const date = today.getDate();
 
-      if (year === 2022) {
+      if (year === 2023) {
         if (month === 2) {
-          return date < 13
+          return date < 19;
         } else {
-          return month < 2
+          return month < 2;
         }
       } else {
-        return year < 2022
+        return year < 2023;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>

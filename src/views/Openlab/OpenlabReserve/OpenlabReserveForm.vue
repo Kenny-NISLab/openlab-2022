@@ -7,7 +7,7 @@
 
     <v-form ref="reserveVisitForm">
       <h2 class="heading--sub">
-        <time datetime="2022-02-14">2022年2月14日</time> {{ time }} で予約します。
+        <time datetime="2023-02-20">2023年2月20日</time> {{ time }} で予約します。
       </h2>
 
       <p
@@ -103,7 +103,7 @@ export default {
         this.$router.push({
           path: '/openlab/reserve/confirm',
           query: {
-            date: '2022-02-14',
+            date: '2023-02-20',
             time: this.time,
             name: this.name,
             studentId: this.studentId,

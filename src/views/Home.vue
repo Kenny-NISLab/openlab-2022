@@ -2,7 +2,7 @@
   <article aria-label="トップページ">
     <section aria-label="オープンラボの概要">
       <h1 class="heading--main">
-        <time datetime="2022-02-14">2022年2月14日(月)</time> NISLAB オープンラボ
+        <time datetime="2023-02-20">2023年2月20日(月)</time> NISLAB オープンラボ
         開催！
       </h1>
       <WelcomeUser />
@@ -23,7 +23,7 @@
           <p>
             学部3年生を中心とした（1・2年生も大歓迎！）在学生の皆さんに向けた<span
               class="accent--text"
-              >オープンラボを<time datetime="2022-02-14">2023年2月14日(月)</time
+              >オープンラボを<time datetime="2023-02-20">2023年2月20日(月)</time
               >に開催します</span
             >。
           </p>
@@ -176,7 +176,7 @@
                 </v-simple-table>
               </v-card>
             </v-card-text>
-            <v-card-text>
+            <v-card-text class="pb-13">
               <v-card class="pa-2 text-center">
                 <v-simple-table dense>
                   <template #default>
@@ -239,7 +239,7 @@
             <v-card-title>開催時間</v-card-title>
             <v-card-subtitle>
               <b>14:15</b
-              >・<b>15:00</b>・<b>15:45</b>・<b>16:30</b>の4回に分けて開催します。<br />感染対策として、各回の定員を8名とさせていただき<u>完全予約制</u>にて実施させていただきます。<br />実際に研究室生活を送ることになる部屋の様子や雰囲気を知ってもらうだけでなく、様々なお話をしたいと思っています。<br />「ちょっと話を聞いてみたいだけなんだけど…」という方もぜひご予約ください！
+              >・<b>15:00</b>・<b>15:45</b>・<b>16:30</b>の4回に分けて開催します。<br />感染対策として、各回の定員を8名とさせていただき<u>完全予約制</u>にて実施させていただきます。<br />実際に研究室生活を送ることになる部屋の様子や雰囲気を知ってもらうだけでなく、様々なお話をしたいと思っています。<br />「ちょっと話を聞いてみたいだけなんだけど…」という方もぜひご予約ください！<br />「可能な時間がすでに予約で埋まっているがオフラインで参加したい」という場合も、ぜひ一度お問い合わせください。
             </v-card-subtitle>
             <v-card-title>開催場所</v-card-title>
             <v-card-subtitle>
