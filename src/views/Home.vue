@@ -33,6 +33,9 @@
           <p>
             当日は十分な予防対策を行うことはもちろんのこと、事前の状況を見てプログラムの変更も想定しています。
           </p>
+          <p class="accent--text">
+            オンライン開催につきましては、参加予約数が一定以下のため、過度な密集が発生することはないと判断し、当日17時まで予約なしでいつでも来訪していただけるようになりました。
+          </p>
         </v-col>
       </v-row>
 
@@ -54,8 +57,10 @@
             オフラインでの研究室訪問を希望される方は<router-link
               to="/openlab/reserve"
             >
-              予約が必要 </router-link
-            >です。必ずご確認ください。
+              <s>予約が必要</s> </router-link
+            >です。→<span class="accent--text">
+              予約なしでいつでも来訪歓迎いたします。</span
+            >
           </v-alert>
         </v-col>
       </v-row>
@@ -207,6 +212,8 @@
                 </v-simple-table>
               </v-card>
             </v-card-text>
+            <br />
+            <br />
           </v-card>
         </v-col>
 
@@ -249,9 +256,15 @@
             </v-card-subtitle>
             <v-card-title>参加方法</v-card-title>
             <v-card-subtitle>
-              2日前までに<router-link to="/openlab/reserve">
-                こちら(ログインが必要です) </router-link
-              >から参加を希望する時間の予約を行ってください。<br />各回の定員を8名とさせていただいておりますので、ご希望の方はお早めにご予約ください。
+              <s
+                >2日前までに<router-link to="/openlab/reserve">
+                  こちら(ログインが必要です) </router-link
+                >から参加を希望する時間の予約を行ってください。<br />各回の定員を8名とさせていただいておりますので、ご希望の方はお早めにご予約ください。</s
+              >
+              <br />
+              <b class="accent--text"
+                >参加予約数が一定以下のため、過度な密集が発生することはないと判断し、当日17時まで予約なしでいつでも来訪歓迎いたします！</b
+              >
             </v-card-subtitle>
           </v-card>
         </v-col>
